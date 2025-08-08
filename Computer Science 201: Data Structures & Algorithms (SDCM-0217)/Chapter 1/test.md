@@ -92,48 +92,46 @@ while (j < 1000) {
 ---
 
 ## 10. How does a debugger in an IDE help?
-Answer: Lets you pause execution, inspect variables, step through code, and find logic errors.
-Why: Improves debugging accuracy and efficiency.
-
+* **Answer:** `Lets you pause execution, inspect variables, step through code, and find logic errors.`
+* **Why:** `Improves debugging accuracy and efficiency.`
 
 ---
 
 ## 11. What does this method return?
-java
-Always show details
-
-Copy
+```java
 public void subtractNumbers(int m, int n) {
     System.out.println(p);
     p = m - n;
 }
-Answer: Nothing (void)
-Why: void methods don’t return values, they only perform actions.
+```
+* **Answer:** `Nothing (void)`
+* **Why:** `void methods don’t return values, they only perform actions.`
 
 ---
 
 ## 12. Fill in the blank
-Question: A while loop is considered _____ if you don't know when the condition will be true.
-Answer: indefinite
-Why: Runs until the condition is met, but iterations are unknown in advance.
+* **Question:** `A while loop is considered _____ if you don't know when the condition will be true.`
+
+* **Answer:** `indefinite`
+* **Why:** `Runs until the condition is met, but iterations are unknown in advance.`
 
 ---
 
 ## 13. Single-line comment effect
-Answer: Creates a note in code ignored by the compiler.
-Why: Useful for documentation without affecting execution.
+* **Answer:** `Creates a note in code ignored by the compiler.`
+* **Why:** `Useful for documentation without affecting execution.`
 
 ---
 
 ## 14. Purpose of main method’s parameter
-Answer: Holds command-line arguments.
-Why: Enables passing data into the program at runtime.
+* **Answer:** `Holds command-line arguments.`
+* **Why:** `Enables passing data into the program at runtime.`
 
 ---
 
 ## 15. Why is grammar checking not part of an IDE?
-Answer: It checks human language, not programming language syntax.
-Why: IDEs focus on code correctness, not English grammar.
+* **Answer:** `It checks human language, not programming language syntax.`
+* **Why:** `IDEs focus on code correctness, not English grammar.`
 
 
 
