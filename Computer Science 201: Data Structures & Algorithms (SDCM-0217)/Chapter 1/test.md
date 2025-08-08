@@ -54,16 +54,15 @@ Why: // tells the compiler to ignore everything on that line. Two forward slashe
 ---
 
 ## 6. What will be the result of this code?
-java
-Always show details
+```java
 
-Copy
 int j = 0;
 while (j < 1000) {
     j = j - 1;
 }
-Answer: Infinite loop
-Why: j decreases forever, so j < 1000 is always true.
+```
+* **Answer:** Infinite loop
+* **Why:** `j decreases forever, so j < 1000 is always true.`
 
 ---
 
