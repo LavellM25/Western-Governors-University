@@ -46,9 +46,10 @@ Why: // tells the compiler to ignore everything on that line. Two forward slashe
 
 ---
 
-5. Which is the parameter in the main method?
-Answer: String[] args
-Why: Stores command-line arguments passed to the program.
+## 5. Which is the parameter in the main method?
+**Answer:** ```java String[] args```
+
+* **Why:** Stores command-line arguments passed to the program.
 
 6. What will be the result of this code?
 java
