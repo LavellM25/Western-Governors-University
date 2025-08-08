@@ -73,7 +73,7 @@ while (j < 1000) {
 ---
 
 ## 8. How to get the number of strings in args?
-* **Answer:** ```java args.length```
+* **Answer:** ``` args.length```
 * **Why:** `.length gives the size of an array.`
 
 ---
