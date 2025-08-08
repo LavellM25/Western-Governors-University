@@ -53,7 +53,7 @@ Why: // tells the compiler to ignore everything on that line. Two forward slashe
 
 ---
 
-6. What will be the result of this code?
+## 6. What will be the result of this code?
 java
 Always show details
 
@@ -67,19 +67,19 @@ Why: j decreases forever, so j < 1000 is always true.
 
 ---
 
-7. A Java statement can be thought of as which one?
+## 7. A Java statement can be thought of as which one?
 Answer: instruction
 Why: A statement tells the computer to perform a specific action.
 
 ---
 
-8. How to get the number of strings in args?
+## 8. How to get the number of strings in args?
 Answer: args.length
 Why: .length gives the size of an array.
 
 ---
 
-9. Example of a multi-line comment:
+## 9. Example of a multi-line comment:
 Answer:
 
 java
@@ -94,14 +94,14 @@ Why: Everything between /* and */ is ignored by the compiler.
 
 ---
 
-10. How does a debugger in an IDE help?
+## 10. How does a debugger in an IDE help?
 Answer: Lets you pause execution, inspect variables, step through code, and find logic errors.
 Why: Improves debugging accuracy and efficiency.
 
 
 ---
 
-11. What does this method return?
+## 11. What does this method return?
 java
 Always show details
 
@@ -115,26 +115,26 @@ Why: void methods don’t return values, they only perform actions.
 
 ---
 
-12. Fill in the blank
+## 12. Fill in the blank
 Question: A while loop is considered _____ if you don't know when the condition will be true.
 Answer: indefinite
 Why: Runs until the condition is met, but iterations are unknown in advance.
 
 ---
 
-13. Single-line comment effect
+## 13. Single-line comment effect
 Answer: Creates a note in code ignored by the compiler.
 Why: Useful for documentation without affecting execution.
 
 ---
 
-14. Purpose of main method’s parameter
+## 14. Purpose of main method’s parameter
 Answer: Holds command-line arguments.
 Why: Enables passing data into the program at runtime.
 
 ---
 
-15. Why is grammar checking not part of an IDE?
+## 15. Why is grammar checking not part of an IDE?
 Answer: It checks human language, not programming language syntax.
 Why: IDEs focus on code correctness, not English grammar.
 
