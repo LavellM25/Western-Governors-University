@@ -79,17 +79,15 @@ while (j < 1000) {
 ---
 
 ## 9. Example of a multi-line comment:
-Answer:
+** Answer:
 
-java
-Always show details
-
-Copy
+```java
 /*
  This is a multi-line comment.
  It can span several lines.
 */
-Why: Everything between /* and */ is ignored by the compiler.
+```
+* **Why:** `Everything between /* and */ is ignored by the compiler.`
 
 ---
 
