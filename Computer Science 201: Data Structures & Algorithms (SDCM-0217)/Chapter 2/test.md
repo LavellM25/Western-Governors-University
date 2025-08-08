@@ -1,8 +1,14 @@
-1. Examine the following code. Which variable CANNOT be used in the parent class of Benefit?
+# Chapter 2 – Object-Oriented Design Fundamentals (Java)
 
-java
-Copy
-Edit
+This README contains **15 practice questions** from Chapter 2 of *Object-Oriented Design Fundamentals* (Java, Data Structures & Algorithms) along with **answers** and **explanations**.
+
+---
+
+## Questions, Answers, and Explanations
+
+### 1. Which variable **CANNOT** be used in the parent class of `Benefit`?
+
+```java
 public class Benefit {
     private String planCode;
     private double HIPAAcode;
@@ -12,55 +18,84 @@ public class HealthPlan extends Benefit {
     private int coverageOption;
     private float employeePremium;
 }
-Answer: coverageOption (also employeePremium)
-Explanation: A superclass (Benefit) cannot access subclass (HealthPlan) members, because the superclass has no knowledge of them. Variables declared in HealthPlan are unique to that class and are not visible to Benefit.
+```
 
-2. Fill in the blank: Code that catches an exception and performs other code is called a(n) _____.
-Answer: exception handler
-Explanation: In Java, code inside a catch block is an exception handler. It responds to a thrown exception by handling it (logging, recovery actions, etc.).
+**Answer:** `coverageOption` (also `employeePremium`)
 
-3. A parent class called SoftDrink has a brew() method. RootBeer and Beer classes inherit from SoftDrink. Each uses the brew() method differently. Which aspect of OOP does this best describe?
-Answer: polymorphism
-Explanation: This is runtime polymorphism (method overriding). Each subclass has its own implementation of the same method, and the actual method called depends on the object type at runtime.
+* **Explanation:** A superclass cannot access subclass-specific fields. Variables declared in `HealthPlan` are invisible to `Benefit`.
 
-4. Examine the following code: Which of the following correctly creates an instance of both the Product and the ProductDetail (non-static inner) class?
+---
 
-java
-Copy
-Edit
+### 2. Fill in the blank: Code that catches an exception and performs other code is called a(n) **\_\_\_\_\_**.
+
+**Answer:** `exception handler`
+
+* **Explanation:** Code inside a `catch` block is the exception handler — it responds to and manages thrown exceptions.
+
+---
+
+### 3. A parent class `SoftDrink` has a `brew()` method. `RootBeer` and `Beer` override it. Which OOP concept is this?
+
+**Answer:** `polymorphism`
+
+* **Explanation:** This is runtime polymorphism (method overriding) — the same method name has different behaviors in subclasses.
+
+---
+
+### 4. How do you correctly create an instance of both `Product` and its non-static inner class `ProductDetail`?
+
+```java
 public class Product {
     public class ProductDetail { }
 }
-Answer:
+```
 
-java
-Copy
-Edit
+**Answer:**
+
+```java
 Product product = new Product();
 Product.ProductDetail detail = product.new ProductDetail();
-Explanation: Non-static inner classes require an instance of their outer class. The syntax outer.new Inner() associates the inner instance with a specific outer instance.
+```
 
-5. Which Java language construct is commonly used to create abstract data types?
-Answer: interfaces
-Explanation: Interfaces define what methods a class must implement without specifying how. This matches the idea of an abstract data type (ADT), which focuses on behavior, not implementation.
+* **Explanation:** Non-static inner classes require an instance of the outer class to be created.
 
-6. What best describes abstraction?
-Answer: Running functions without knowing the code
-Explanation: Abstraction means you work with an object through its public interface without knowing its internal workings. You know what it does, not how it does it.
+---
 
-7. Fill in the blank: Sally is writing code for a vehicle that has attributes (manufacturer, color, price) and methods (start, drive, park). To do this, she needs to create a _____ for vehicles.
-Answer: class
-Explanation: A class is the blueprint for creating objects with those attributes and behaviors.
+### 5. Which Java construct is commonly used to create abstract data types?
 
-8. Fill in the blank: Java doesn't allow _____, meaning one class cannot inherit from more than one parent class.
-Answer: multiple inheritance
-Explanation: Java supports single inheritance to avoid ambiguity (diamond problem). Multiple inheritance of classes is not allowed, but multiple interface implementation is allowed.
+**Answer:** `interfaces`
 
-9. What is the output of this code?
+* **Explanation:** Interfaces define *what* an ADT should do without specifying *how*, matching the ADT concept.
 
-java
-Copy
-Edit
+---
+
+### 6. What best describes abstraction?
+
+**Answer:** `Running functions without knowing the code`
+
+* **Explanation:** Abstraction hides the internal implementation, letting you focus on what an object does.
+
+---
+
+### 7. Fill in the blank: Sally is writing code for a vehicle with attributes and methods. To do this, she needs to create a **\_\_\_\_\_** for vehicles.
+
+**Answer:** `class`
+
+* **Explanation:** A class is the blueprint for objects with defined attributes and behaviors.
+
+---
+
+### 8. Fill in the blank: Java doesn't allow **\_\_\_\_\_**, meaning one class cannot inherit from more than one parent class.
+
+**Answer:** `multiple inheritance`
+
+* **Explanation:** Java allows only single inheritance for classes to avoid ambiguity (diamond problem).
+
+---
+
+### 9. Output of the following code?
+
+```java
 public class Foo {
     int number = 3;
     int add(int number) {
@@ -76,26 +111,41 @@ public class Foo {
         System.out.println("The number is " + bar.add(4));
     }
 }
-Answer: The number is 5
-Explanation: The Bar class’s add method takes the passed number (4) and returns 4 + 1.
+```
 
-10. Which phrase accurately describes the relationship between the subclass BlueChip and the parent Stock?
-Answer: BlueChip is a Stock
-Explanation: Inheritance creates an is-a relationship. A BlueChip object is also a Stock object.
+**Answer:** `The number is 5`
 
-11. Java keeps a list of exceptions and will know what exception has occurred. Where are these stored?
-Answer: exception class
-Explanation: Java has a hierarchy of exception classes in its API. The JVM matches thrown exceptions against these classes to determine type and handling.
+* **Explanation:** `bar.add(4)` in `Bar` returns `4 + 1`.
 
-12. Fill in the blank: You are designing a program for vehicles. Some of the class names include Semi, Compact, and SUV. If we create a new semi, it is said that the semi is a(n) _____ of a(n) _____.
-Answer: instance, semi class
-Explanation: An instance is a specific object created from a class. Here, a new semi is an instance of the Semi class.
+---
 
-13. In the following code, what is the name of the inner class?
+### 10. Which phrase accurately describes the relationship between subclass `BlueChip` and parent `Stock`?
 
-java
-Copy
-Edit
+**Answer:** `BlueChip is a Stock`
+
+* **Explanation:** Inheritance creates an *is-a* relationship — a `BlueChip` object is also a `Stock` object.
+
+---
+
+### 11. Java keeps a list of exceptions and will know what exception has occurred. Where are these stored?
+
+**Answer:** `exception class`
+
+* **Explanation:** Java’s exception hierarchy contains predefined exception classes used by the JVM to identify errors.
+
+---
+
+### 12. Fill in the blank: You are designing a program for vehicles. Some of the class names include `Semi`, `Compact`, and `SUV`. If we create a new semi, it is said that the semi is a(n) **\_\_\_\_\_** of a(n) **\_\_\_\_\_**.
+
+**Answer:** `instance, semi class`
+
+* **Explanation:** An instance is a specific object of a given class.
+
+---
+
+### 13. In the following code, what is the name of the inner class?
+
+```java
 public class Periodical {
     long ISBN;
     public class Book {
@@ -104,15 +154,30 @@ public class Periodical {
         }
     }
 }
-Answer: Book
-Explanation: Book is the non-static inner class inside Periodical.
+```
 
-14. What keyword is used when creating a class that uses an interface?
-Answer: implements
-Explanation: The implements keyword tells Java the class will provide method definitions for all methods in the interface.
+**Answer:** `Book`
 
-15. Which of the following would violate representational independence in an abstract data type?
-Answer: a deck data type having a coin flip method
-Explanation: Representational independence means methods should be relevant to the ADT’s intended purpose. Coin flipping has nothing to do with a deck’s core operations, so it breaks that principle.
+* **Explanation:** `Book` is a non-static inner class inside `Periodical`.
 
+---
 
+### 14. What keyword is used when creating a class that uses an interface?
+
+**Answer:** `implements`
+
+* **Explanation:** The `implements` keyword signals that a class will provide definitions for all interface methods.
+
+---
+
+### 15. Which of the following violates representational independence in an ADT?
+
+**Answer:** `a deck data type having a coin flip method`
+
+* **Explanation:** The method is unrelated to a deck’s purpose, mixing in unrelated behavior.
+
+---
+
+## Usage
+
+This document can be used as a **study guide** or **reference** for understanding Java OOP fundamentals and common exam/training questions.
