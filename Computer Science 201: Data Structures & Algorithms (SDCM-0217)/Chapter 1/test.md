@@ -67,14 +67,14 @@ while (j < 1000) {
 ---
 
 ## 7. A Java statement can be thought of as which one?
-Answer: instruction
-Why: A statement tells the computer to perform a specific action.
+* **Answer:** instruction
+* **Why:** `A statement tells the computer to perform a specific action.`
 
 ---
 
 ## 8. How to get the number of strings in args?
-Answer: args.length
-Why: .length gives the size of an array.
+* **Answer:** ```java args.length```
+* **Why:** `.length gives the size of an array.`
 
 ---
 
