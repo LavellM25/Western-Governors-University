@@ -26,3 +26,8 @@ public class Computer {
 ```
 
 Output: `16GB RAM, 512GB SSD`
+
+Key Points: 
+- Does not need an outer class instance.
+
+- Cannot directly access outer class non-static variables.
