@@ -32,5 +32,5 @@ public class Restaurant {
 ### Output: 
 ```Meal Ticket: Pasta```
 
--- Key Points: 
+-Key Points: 
 
