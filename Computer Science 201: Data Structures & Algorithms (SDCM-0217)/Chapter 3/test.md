@@ -90,3 +90,24 @@ int[] numbers = {1, 2, 3, 4, 5};
 **Answer:** ordered quest in a video game that uses retry stages. 
 
 **Explanation:** A doubly linked list allows traversal in both directions, useful for systems where you can move forward or backward, like quest progression with retry stages.
+
+---
+
+### 15. Give an example that correctly processes a 2-dimensional array.
+
+```java
+int[][] matrix = {
+    {1, 2, 3},
+    {4, 5, 6},
+    {7, 8, 9}
+};
+
+for (int row = 0; row < matrix.length; row++) {
+    for (int col = 0; col < matrix[row].length; col++) {
+        System.out.print(matrix[row][col] + " ");
+    }
+    System.out.println();
+}
+
+```
+**Explanation:** Nested loops process each row and column. `matrix.length` gives rows, `matrix[row].length` gives columns.
