@@ -32,5 +32,10 @@ public class Restaurant {
 ### Output: 
 ```Meal Ticket: Pasta```
 
--Key Points: 
+**Key Points:**
+- Defined inside a method, not at the class level.
+
+- Exists only inside that method.
+
+- Can access local variables (mealName) if they are effectively final.
 
