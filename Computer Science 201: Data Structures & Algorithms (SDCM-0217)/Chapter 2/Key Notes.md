@@ -23,7 +23,8 @@ public class Car {
 
 ---
 ### Output: 
-- plaintext Think of a Car that has an Engine. The engine only works as part of a specific car, so it makes sense to keep it inside the car class.```
 
-
-
+```Starting Toyota's engine...```
+- Think of a Car that has an Engine. The engine only works as part of a specific car, so it makes sense to keep it inside the car class.
+- Must create an outer class instance first.
+- Can directly access outer class variables (brand in this case).
