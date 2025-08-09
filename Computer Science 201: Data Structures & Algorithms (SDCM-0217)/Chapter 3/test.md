@@ -82,3 +82,10 @@ This README contains **15 practice questions** from *Core Data Structures* (Java
 **Answer:**
 ```java
 int[] numbers = {1, 2, 3, 4, 5};
+```
+
+---
+
+### 14. Which of the following is a practical example of a doubly linked list?
+**Answer:** ordered quest in a video game that uses retry stages. 
+**Explanation:** A doubly linked list allows traversal in both directions, useful for systems where you can move forward or backward, like quest progression with retry stages.
