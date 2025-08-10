@@ -1,7 +1,5 @@
 # Chapter 3 – Database Fundamentals (Study.com)
 
-This README contains **15 practice questions** from Chapter 3 of the Database course along with **answers** and **explanations**.
-
 ---
 
 ## Questions, Answers, and Explanations
