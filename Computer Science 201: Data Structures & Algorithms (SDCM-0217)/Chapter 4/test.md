@@ -91,7 +91,7 @@ This README contains **15 practice questions** from the â€œAnalyzing Algorithmsâ
 ---
 
 ### 15. What is the time complexity of the following code?
-```c
+```java
 i = 0;
 while (i < n) { 
     j = i;
@@ -101,3 +101,5 @@ while (i < n) {
     }
     i = j;
 }
+```
+**Answer:** `O(N)`
