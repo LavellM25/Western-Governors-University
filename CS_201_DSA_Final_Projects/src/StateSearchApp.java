@@ -8,9 +8,6 @@ import java.util.*;
  * 2) Searches a user-supplied pattern using Boyer–Moore (bad character rule)
  * 3) Exits on request
  *
- * Search is case-insensitive for user friendliness. Reported indices are 0-based
- * and refer to the displayed text.
- *
  * Algorithm notes:
  * - Preprocess pattern with a last-occurrence table (bad character heuristic)
  * - On mismatch at pattern index j against text character c,
@@ -34,12 +31,18 @@ public class StateSearchApp {
             "Wisconsin","Wyoming"
     };
 
+    /*
+    I consolidate the 50 states into one immutable TEXT constant using String.join.
+    It is private, static, and final, so I have exactly one safe copy for the whole app.
+     */
     private static final String TEXT = String.join(", ", STATES);
 
+    // Main method
     public static void main(String[] args) {
         runMenu();
     }
 
+    // This is a classic read‑eval loop. I show the menu, read a line, trim it, and branch on the choice.
     private static void runMenu() {
         try (Scanner sc = new Scanner(System.in)) {
             while (true) {
@@ -64,8 +67,20 @@ public class StateSearchApp {
                 }
             }
         }
-    }
+        /**
+         * while (true) keeps showing the menu until the user chooses Exit.
+         * printMenu() writes the 3 options.
+         * sc.nextLine().trim() reads the whole line, then trim() removes surrounding spaces, which avoids accidental whitespace issues.
 
+         * I use the first character so that 1 or 1 extra still map to menu item 1.
+         * Valid inputs go to the corresponding handler, and 3 exits.
+         * switch routes to:
+         * '1' → displayText()
+         * '2' → handleSearch(sc) (we pass the same scanner to read the pattern)
+         * '3' → print “Goodbye.” and return to exit the method, which ends the program
+         * default → invalid selection message
+         */
+    }
     private static void printMenu() {
         System.out.println("========== State Search ==========");
         System.out.println("1) Display the text");
@@ -74,11 +89,31 @@ public class StateSearchApp {
         System.out.print("Select an option: ");
     }
 
+
     private static void displayText() {
         System.out.println("\n--- Text (50 U.S. states) ---");
         System.out.println(TEXT + "\n");
-    }
+    } // Option 1 shows the exact text the search runs over, which is the 50 states joined by ,
 
+
+    /**
+     * a) Read and validate the pattern
+     * Prompt for a pattern and read the entire line.
+     * If the user enters nothing, print a friendly error and return to the menu.
+
+     * b) Run Boyer–Moore (bad character rule)
+     * Call boyerMooreBadChar(TEXT, pattern, true).
+     * First argument: the full text of states.
+     * Second: the user’s pattern.
+     * Third: true means case‑insensitive search.
+     * Case‑insensitive strategy: the method compares on lowercase copies internally,
+     * but always returns indices that refer to the original TEXT.
+     * This keeps results consistent even if letter cases differ.
+
+     * c) Report results
+     * If the list is empty, say no occurrences found.
+     * Print the list of 0‑based start indices. These are character offsets into the big string that contains all states.
+     */
     private static void handleSearch(Scanner sc) {
         System.out.print("Enter a pattern to search for: ");
         String pattern = sc.nextLine();
